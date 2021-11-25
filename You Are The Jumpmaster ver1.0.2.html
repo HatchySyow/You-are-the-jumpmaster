@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<head><meta charset="utf-8">
+<title>You Are The Jumpmaster</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"></link>
+</head><body>
+<div class="container">
+  <h1>You Are The Jumpmaster!!!</h1><br><p style="font-size:25px;">なんだって？俺がジャンプマスターか。
+    <br><b>ーたまにはギャンブルも悪くない。そう思うだろ？</b>
+    <br>マップを選択してください
+  <select id="apexmap">
+     <option value="0">Kings Canyon</option>
+     <option value="1">Worlds Edge</option>
+  </select>
+  <button id="btn" class="btn btn-primary">降下場所を表示</button>
+  </p>
+  <h3 id="message" style="color:green;"></h3>
+</div>
+<script>
+
+   let kingscanyon=['砲台(ARTILLERY)','スラムレイク(SLUM LAKES)','リレー(RELAY)','ザ・ピット(THE PIT)',
+   '収容所(CONTAINMENT)','湿地(WETLANDS)','ランオフ(RUNOFF)','バンカー(BUNKER)','沼沢(SWAMPS)',
+   '航空基地(AIRBASE)','ザ・ケージ(THE CAGE)','ハイドロダム(HYDRO DAM)','スカルタウン(SKULL TOWN)',
+   'マーケット(MARKET)','リパルサー(REPULSER)','サンダードーム(THUNDERDOME)','水処理施設(WATER TREATMENT)',
+   'サプライシップ(SUPPLY SHIP)','ハイティアエリア(HIGH TIER ERIA)'];
+
+   let worldsedge=['スカイフック(SKYHOOK)','精錬所(REFINERY)','掘削場(DRILL SITE)','エピセンター(THE EPICENTER)',
+   '溶岩溝(LAVA FISSURE)','列車庫(THE TRAIN YARD)','キャピトルシティ(CAPITOL CITY)','展望(OVERLOOK)','燃料庫(FUEL DEPOT)',
+   '間欠泉(THE GEYSER)','火力発電所(THERMAL STATION)','仕分け工場(SORTING FACTORY)','ラバシティー(LAVA CITY)',
+   'ザ・ツリー(THE TREE)','ザ・ドーム(THE DOME)','列車(TRAIN)']
+
+window.onload = function(){
+    let msg = document.getElementById("message");
+     btn.onclick = function(){
+          let apexmap = document.getElementById("apexmap").value;
+          if (apexmap==0 ){
+                   let kcrandom=Math.floor(Math.random()*kingscanyon.length);
+               msg.innerHTML = kingscanyon[kcrandom] + "か。地獄のほうがましだな。"+
+               "<br>by Octavio “Octane” Silva</br>"
+          }
+          else if (apexmap==1 ){
+            let werandom=Math.floor(Math.random()*worldsedge.length);
+            msg.innerHTML = worldsedge[werandom] + "ね。電圧を下げないようにしましょう。" +
+            "<br>by Natalie “Wattson” Paquette</br>"
+          }
+      };
+}
+
+</script>
+</body>
+</html>
