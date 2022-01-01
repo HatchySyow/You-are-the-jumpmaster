@@ -1,0 +1,6 @@
+#使い方 / How to use.
+ファイルを開き，降下のボタンを押すと降下する場所をランダムに決めてくれます．
+Htmlファイルとして機能するこのプログラムはApexLegendsでジャンプマスターを務める際に役に立ちます．
+
+Open the file and press the Descent button to randomly determine the location of the descent.
+This program, which works as an Html file, is useful for ApexLegends to act as a jumpmaster.
